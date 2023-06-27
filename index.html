@@ -52,13 +52,14 @@
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#Achievements" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Achievements</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
+        <ul>  
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>  
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>  
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>  
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#Achievements" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Achievements</span></a></li>  
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>  
+          </ul>  
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
@@ -305,6 +306,135 @@
       </div>
     </section><!-- End Resume Section -->
 
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>PROJECTS</h2>
+      <p>Here are some of my projects:   (*Blue titles have links)</p>
+      <button onclick="sortProjects()">Sort by Difficulty</button>
+      <select id="tagFilter" onchange="filterByTag()">
+        <option value="">Select Tag</option>
+        <option value="Python">Python</option>
+        <option value="AI">AI</option>
+        <option value="Video Processing">Video Processing</option>
+        <option value="Translation">Translation</option>
+        <option value="React Native">React Native</option>
+        <option value="Firebase">Firebase</option>
+        <option value="Text-to-Speech">Text-to-Speech</option>
+        <option value="REACT">REACT</option>
+        <!-- Add more options for each unique tag -->
+      </select>
+      <button onclick="clearFilters()">Clear Filters</button>
+    </div>
+
+    <ul class="project-list">
+
+      <!-- Project 1: Instant Dub -->
+      <li data-tags="Python, AI, Video Processing, Translation" data-difficulty="8">
+        <h3><a href="https://github.com/Mitchaka14/InstantDubV2">★ Instant Dub and Instant Dub V2</a></h3>
+        <span class="project-tags">Tags: Python, AI, Video Processing, Translation<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: InstantDubing-->
+          <strong>What it is:</strong> InstantDubing, an innovative AI Video Translator, employs state-of-the-art AI technology to transcribe, translate, and re-voice a video, rendering it in English while maintaining the original speaker's voice.<sup>1</sup><br>
+          <strong>What it does:</strong> The tool operates by taking a video, transcribing the spoken content into text, translating that text into English, and then re-voicing the translated text back onto the video. The resulting voice is a synthesized representation that imitates the original speaker's voice.<sup>1</sup><br>
+          <strong>How it operates:</strong> InstantDubing leverages a variety of AI APIs, which handle tasks ranging from speech-to-text conversion to translation, and finally to text-to-speech processes. The user provides the necessary API keys and the application manages the entire process, from transcribing the spoken words in the video to producing the final translated video. It's designed for ease of use, with a step-by-step guide available in the README file.<sup>1</sup><br>
+          <strong>Challenges Overcame:</strong> The journey was not without its challenges. Maintaining the contextual accuracy of translations proved difficult and required creative AI applications. Another significant challenge was designing the tool to function optimally across various systems, regardless of whether they had a powerful GPU. This required breaking down the audio/video multiple times to ensure compatibility. Furthermore, creating a custom speaker diarization process was necessary for this specific task, necessitating a deep dive into the topic of speaker diarization. Utilizing the Hugging Face platform also required a significant learning curve, leading to a richer understanding of the tool and its capabilities.<br>
+          <strong>Real-Life Use Cases:</strong> Considering the functionality of InstantDubing, potential real-life applications may include:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Educational Content: The tool can translate educational videos, making them accessible to a larger, global audience.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Entertainment Industry: Movies, TV shows, and other video content can be translated to reach audiences worldwide.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Business Meetings and Conferences: Recorded meetings or conference videos can be translated, ensuring clear understanding among multinational teams.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;News and Journalism: News videos can be translated to be shared globally, ensuring diverse audiences have access to the same information.<br>
+      </p>
+      </li>
+    
+
+      <!-- Project 2: AI Chat -->
+      <li data-tags="React Native, Firebase, AI, Text-to-Speech, REACT" data-difficulty="8">
+        <h3><a href="https://github.com/Mitchaka14/chat">ChatBud</a></h3>
+        <span class="project-tags">Tags: React Native, Firebase, AI, Text-to-Speech<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: Chat-->
+          <strong>What it is:</strong> A React Native application that utilizes Firebase for authentication, database, and online storage. This AI-based chat application has a distinctive feature that allows users to call the AI using a text-to-speech streams API from Eleven Labs.<br>
+          <strong>What it does:</strong> The application enables real-time chat functionality with user authentication and utilizes Firebase for storing chat data. The text-to-speech streams API integration allows users to communicate with the AI using voice commands that are converted to text for processing.<br>
+          <strong>How it operates:</strong> The application is developed using React Native, providing a cross-platform solution for mobile devices. Firebase is used for user authentication, real-time database functionality, and online storage of media files. The integration with the text-to-speech streams API from Eleven Labs enables users to interact with the AI through voice commands.<br>
+          <strong>Challenges Overcame:</strong> Ensuring seamless real-time chat functionality, handling user authentication securely, and integrating the text-to-speech streams API posed significant challenges. Robust error handling, data synchronization, and maintaining user privacy were key considerations in overcoming these challenges.<br>
+          <strong>Real-Life Use Cases:</strong> The Chat application can be used in various scenarios, including customer support chats, team collaboration, and interactive AI-assisted conversations in different domains such as virtual assistants or language learning.<br>
+      </p>
+            </li>
+
+      <!-- Project 3: K12 Student-Teacher -->
+      <li data-tags="JavaScript, REACT, AI, Education, YouTube API, Google Search" data-difficulty="6">
+        <h3><a href="https://github.com/Mitchaka14/k12-student-teacher">K12 Student-Teacher</a></h3>
+        <span class="project-tags">Tags: JavaScript, REACT, AI, Education, YouTube API, Google Search<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: K12 Student-Teacher-->
+          <strong>What it is:</strong> The K12 Student-Teacher project is an AI-powered tutoring application that provides YouTube tutorials for any questions asked. It leverages advanced AI techniques to generate appropriate search terms and retrieve relevant educational videos from platforms like YouTube.<br>
+          <strong>What it does:</strong> The application enables students to ask questions using natural language queries. The AI-powered backend processes the questions, generates search terms based on the query, and performs searches using the YouTube API and Google Search. The retrieved tutorial videos are then presented to the student as relevant learning resources.<br>
+          <strong>How it operates:</strong> The application is built using JavaScript and incorporates AI algorithms for natural language processing and search term generation. It utilizes the YouTube API and Google Search API to retrieve educational videos based on the generated search terms. The student-teacher interaction is facilitated through a user-friendly interface.<br>
+          <strong>Challenges Overcame:</strong> Overcoming the challenges of natural language understanding, generating appropriate search terms for educational content, and efficiently retrieving relevant tutorial videos were key areas of focus. Optimizing the search algorithm and implementing effective filtering mechanisms were crucial in ensuring the quality and relevance of the retrieved videos.<br>
+          <strong>Real-Life Use Cases:</strong> The K12 Student-Teacher application can be used by students of various grade levels as a supplementary educational tool. It can assist students in finding relevant tutorial videos for their questions, enhancing their learning experience and providing additional resources beyond traditional classroom settings.<br>
+      </p>
+            </li>
+
+      <!-- Project 4: Kosi Chat -->
+      <li data-tags="Web Development, REACT, AI, Chatbot" data-difficulty="6">
+        <h3><a >Kosi Chat</a></h3>
+        <span class="project-tags">Tags: Web Development, REACT, AI, Chatbot<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: Kosi Chat-->
+          <strong>What it is:</strong> Kosi Chat is a web-based application that allows users to interact with an AI-powered chatbot. The chatbot is designed to provide information, answer questions, and engage in conversations with users in a conversational and user-friendly manner.<br>
+          <strong>What it does:</strong> The chatbot utilizes AI technologies to understand user queries, provide appropriate responses, and simulate human-like conversations. It can handle a wide range of topics and adapt its responses based on user interactions. The user interface provides a seamless and intuitive chatting experience.<br>
+          <strong>How it operates:</strong> The application is developed using web development technologies such as HTML, CSS, and JavaScript. The AI chatbot utilizes natural language processing (NLP) techniques and machine learning algorithms to understand and generate responses. The user interface is designed to be user-friendly and engaging, promoting a smooth interaction between the user and the chatbot.<br>
+          <strong>Challenges Overcame:</strong> Developing a chatbot that can effectively understand user queries, generate accurate responses, and maintain a conversational flow presented challenges in natural language understanding and dialogue management. Training the AI models and fine-tuning their responses to enhance user experience required extensive data processing and algorithm optimization.<br>
+          <strong>Real-Life Use Cases:</strong> Kosi Chat can be utilized in various domains, including customer support, virtual assistants, and online interactive platforms. It can provide personalized assistance, answer frequently asked questions, and engage users in informative and entertaining conversations.<br>
+      </p>
+            </li>
+
+      <!-- Project 5: Pyto Search -->
+      <li data-tags="Python, AI, Search Engine, NLP" data-difficulty="8">
+        <h3><a >Pyto Search</a></h3>
+        <span class="project-tags">Tags: Python, AI, Search Engine, NLP<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: Pyto Search-->
+          <strong>What it is:</strong> Pyto Search is an intelligent search tool built using Python. It creates embeddings/indexes from any given site or PDF, enabling advanced search capabilities using AI techniques.<br>
+          <strong>What it does:</strong> The tool processes the content of a given site or PDF and creates embeddings or indexes that capture the semantic information of the content. It utilizes AI algorithms to analyze and understand the context of the content, enabling efficient searching and retrieval of relevant information.<br>
+          <strong>How it operates:</strong> Pyto Search is implemented using Python and leverages AI techniques such as natural language processing (NLP) and deep learning. It utilizes pre-trained models and algorithms to create embeddings or indexes from the content. The user interacts with the tool through a command-line interface or a graphical user interface (GUI).<br>
+          <strong>Challenges Overcame:</strong> Overcoming challenges in data preprocessing, feature extraction, and search algorithm design were key considerations in developing Pyto Search. Optimizing the search performance, handling large-scale document processing, and ensuring accurate semantic understanding were crucial aspects of the project.<br>
+          <strong>Real-Life Use Cases:</strong> Pyto Search can be applied in various scenarios, including research, document analysis, and knowledge management. It enables users to efficiently search and retrieve information from large volumes of text-based content, enhancing productivity and information discovery.<br>
+      </p>
+            </li>
+
+      <!-- Project 6: Speaker Diarization -->
+      <li data-tags="Python, AI, Audio Analysis, Language Model" data-difficulty="6">
+        <h3>Speaker Diarization</h3>
+        <span class="project-tags">Tags: Python, AI, Audio Analysis, Language Model<br></br></span>
+        <button onclick="toggleDescription(this)">Show/Hide Description</button>
+        <p class="project-description" style="display: none;">
+          <!--Project: Speaker Diarization-->
+          <strong>What it is:</strong> Speaker Diarization is a Python-based project focused on speaker diarization, which involves separating and identifying speakers in an audio recording. It utilizes AI techniques and language models to make assumptions about who is speaking.<br>
+          <strong>What it does:</strong> The project analyzes audio recordings and employs AI algorithms to segment the audio into speaker-specific segments. It leverages features such as speaker embeddings, voice characteristics, and linguistic patterns to identify individual speakers and assign labels to their respective segments.<br>
+          <strong>How it operates:</strong> Speaker Diarization is implemented using Python and utilizes AI techniques such as audio signal processing, speaker recognition, and language modeling. The project employs various algorithms and models to perform speaker diarization, and the output can be visualized or used for further analysis.<br>
+          <strong>Challenges Overcame:</strong> Developing an accurate and reliable speaker diarization system required addressing challenges in audio preprocessing, feature extraction, and model training. Overcoming variations in speaker characteristics, background noise, and handling overlapping speech segments were key challenges in achieving accurate speaker diarization results.<br>
+          <strong>Real-Life Use Cases:</strong> Speaker Diarization has applications in various domains, including audio transcription, forensic analysis, meeting recordings, and voice-controlled systems. It enables the identification and separation of speakers in multi-speaker audio recordings, facilitating subsequent analysis and understanding of the recorded content.<br>
+      </p>
+            </li>
+
+    </ul>
+
+  </div>
+</section>
+<!-- End Portfolio Section -->
+
+
+
     <!-- ======= Services Section ======= -->
     <section id="Achievements" class="services">
       <div class="container">
@@ -352,7 +482,7 @@
               <div class="address"><a href="https://www.google.com/maps/place/Northwest+Calgary,+Calgary,+AB/@51.1153331,-114.2493062,12z/data=!3m1!4b1!4m6!3m5!1s0x537168d45bdbb7bd:0x97850dd7002facb0!8m2!3d51.1106062!4d-114.1784341!16s%2Fg%2F1pzx7_7rr?entry=ttu">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Calgar Alberta, ca </p></a>
+                <p>Calgary Alberta, ca </p></a>
               </div>
 
               <div class="email"><a href="mailto:akaelumitchell@gmail.com">
@@ -411,6 +541,8 @@
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- js scripts -->
+    <script src="assets/js/projects.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -422,6 +554,7 @@
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

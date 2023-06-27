@@ -601,6 +601,12 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
+.portfolio .toggle-text {
+  font-size: 0.8em; /* Adjust this value to your liking */
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
 
 .portfolio #portfolio-flters {
   padding: 0;
